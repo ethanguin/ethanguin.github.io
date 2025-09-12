@@ -3,124 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>Welcome | My Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    /* --- Quick clean styling --- */
-    body {
-      margin: 0;
-      font-family: system-ui, sans-serif;
-      background: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: #222;
-      color: #fff;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 1.5rem;
-    }
-    nav a {
-      color: #fff;
-      margin-left: 1.2rem;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    section {
-      margin-bottom: 3rem;
-    }
-    #about img {
-      max-width: 180px;
-      border-radius: 50%;
-      display: block;
-      margin-bottom: 1rem;
-    }
-    h2 {
-      margin-bottom: 0.5rem;
-      color: #222;
-    }
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-    .project-card {
-      background: #fff;
-      border-radius: 8px;
-      padding: 1rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .project-card h3 {
-      margin-top: 0;
-    }
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-  </style>
 </head>
 <body>
   <header>
-    <h1>My Portfolio</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1>Hi, I’m [Your Name]</h1>
   </header>
 
   <main>
-    <!-- About Section -->
-    <section id="about">
-      <h2>About Me</h2>
-      <img src="images/profile.jpg" alt="My Photo">
-      <p>Hello! I’m [Your Name], a [your role: e.g., developer, designer, student] passionate about building clean and functional digital experiences. I enjoy working on projects that combine creativity and problem-solving.</p>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3>Project One</h3>
-          <p>Short description of what you built, tools you used, and the outcome.</p>
-          <a href="https://github.com/yourusername/project-one" target="_blank">View on GitHub</a>
-        </div>
-        <div class="project-card">
-          <h3>Project Two</h3>
-          <p>Another cool project highlight. Keep it brief and engaging.</p>
-          <a href="https://github.com/yourusername/project-two" target="_blank">View on GitHub</a>
-        </div>
-        <!-- Add more project-card blocks as needed -->
+    <section>
+      <p>Welcome to my portfolio! Explore my work and learn more about me.</p>
+      <div class="landing-links">
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
       </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>You can reach me at:</p>
-      <ul>
-        <li>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></li>
-        <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></li>
-        <li>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></li>
-      </ul>
     </section>
   </main>
 
@@ -129,7 +27,6 @@
   </footer>
 
   <script>
-    // Auto-update year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
