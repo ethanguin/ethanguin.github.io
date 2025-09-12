@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | My Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Contact Me</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <p>You can reach me at:</p>
+      <ul>
+        <li>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></li>
+        <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></li>
+        <li>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

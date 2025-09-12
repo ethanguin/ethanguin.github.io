@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | My Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Projects</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="projects-grid">
+      <div class="project-card">
+        <h3>Project One</h3>
+        <p>Short description of the project.</p>
+        <a href="https://github.com/yourusername/project-one" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Project Two</h3>
+        <p>Another brief description.</p>
+        <a href="https://github.com/yourusername/project-two" target="_blank">View on GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
