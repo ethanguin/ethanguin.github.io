@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me | My Portfolio</title>
+  <title>Real-Time Raytracer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Passero+One&display=swap">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
   <div id="site-header"></div>
   <script>
-    fetch('/header.html')
+    fetch('../header.html')
         .then(response => response.text())
         .then(data => {
         document.getElementById('site-header').innerHTML = data;
@@ -20,19 +20,18 @@
         .catch(err => console.error('Header load failed:', err));
   </script>
 
-  <main>
-    <section id="about">
-      <img src="images/profile.jpg" alt="My Photo">
-      <p>Hello! I’m [Your Name], a [your role]. I love building clean, functional digital experiences.</p>
-    </section>
+  <main class="project-detail">
+    <img src="../images/realtimeraytracer-full.jpg" alt="Raytracer Screenshot">
+    <p>
+      This is my real-time raytracer built using Vulkan-HPP. It features
+      path tracing, HDRI environment lighting, and a real-time denoiser.
+    </p>
+    <h2>Development Notes</h2>
+    <p>Initially, I built this as an experiment with acceleration structures...</p>
+
+    <h2>Gallery</h2>
+    <img src="../images/raytracer-shot1.jpg" alt="Shot 1">
+    <img src="../images/raytracer-shot2.jpg" alt="Shot 2">
   </main>
-
-  <footer>
-    <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>

@@ -4,17 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | My Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Passero+One&display=swap">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Contact Me</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-    </nav>
-  </header>
+  <div id="site-header"></div>
+  <script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById('site-header').innerHTML = data;
+        })
+        .catch(err => console.error('Header load failed:', err));
+  </script>
 
   <main>
     <section>

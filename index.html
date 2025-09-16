@@ -3,27 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome | My Portfolio</title>
+  <title>Ethan Winn Bishop | FX & TD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Passero+One&display=swap">
+
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    section {
+      display: flex;
+      align-items: center; /* vertically center text next to image */
+      gap: 2rem;           /* space between image and text */
+      flex-wrap: nowrap;    /* keep image and text on the same row */
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    /* Profile image styling */
+    section img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* Wrapper for paragraph + links */
+    .intro-wrapper {
+      display: flex;
+      flex-direction: column; /* stack paragraph and links vertically */
+      gap: 1rem;
+      flex: 1; /* take remaining space next to image */
+    }
+
+    /* Paragraph styling */
+    section p {
+      font-size: 1.5rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Mobile stacking */
+    @media (max-width: 768px) {
+      section {
+        flex-direction: column; /* stack image above text on small screens */
+        text-align: center;
+      }
+
+      section img {
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Hi, I’m [Your Name]</h1>
-  </header>
+  <div id="site-header"></div>
+  <script>
+    fetch('/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('site-header').innerHTML = data;
+      })
+      .catch(err => console.error('Header load failed:', err));
+  </script>
 
   <main>
-    <section>
-      <p>Welcome to my portfolio! Explore my work and learn more about me.</p>
-      <div class="landing-links">
-        <a href="about.html">About Me</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </section>
+  <section>
+    <img src="images/EthanBishop.jpg" alt="Ethan Bishop">
+    <div class="intro-wrapper">
+      <p>Hello! I'm Ethan Bishop, a BYU student studying CS Animation with an emphasis on FX and Tool Development.</p>
+    </div>
+  </section>
+
+  <div class="landing-links">
+    <a href="about.html">About Me</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </div>
   </main>
 
+
+
   <footer>
-    <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
+    <p>&copy; <span id="year"></span> Ethan Bishop. All rights reserved.</p>
   </footer>
 
   <script>

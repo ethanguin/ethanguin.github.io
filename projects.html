@@ -3,40 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects | My Portfolio</title>
+  <title>Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Passero+One&display=swap">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Projects</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="projects-grid">
-      <div class="project-card">
-        <h3>Project One</h3>
-        <p>Short description of the project.</p>
-        <a href="https://github.com/yourusername/project-one" target="_blank">View on GitHub</a>
-      </div>
-      <div class="project-card">
-        <h3>Project Two</h3>
-        <p>Another brief description.</p>
-        <a href="https://github.com/yourusername/project-two" target="_blank">View on GitHub</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
-  </footer>
-
+  <div id="site-header"></div>
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    fetch('/header.html')
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById('site-header').innerHTML = data;
+        })
+        .catch(err => console.error('Header load failed:', err));
   </script>
+
+  <main class="project-grid">
+    <a class="project-card" href="projects/realtimeraytracer.html">
+      <img src="images/realtimeraytracer-thumb.jpg" alt="Real-Time Raytracer">
+      <div class="overlay">
+        <h2>Real-Time Raytracer</h2>
+        <p>A Vulkan-based raytracing engine with real-time denoising.</p>
+      </div>
+    </a>
+
+    <a class="project-card" href="projects/portfolio.html">
+      <img src="images/portfolio-thumb.jpg" alt="Portfolio Website">
+      <div class="overlay">
+        <h2>Portfolio Website</h2>
+        <p>The site you're looking at right now!</p>
+      </div>
+    </a>
+    
+    <!-- Add more projects as needed -->
+  </main>
 </body>
 </html>
