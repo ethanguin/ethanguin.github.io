@@ -25,8 +25,43 @@ body {
   background-color: var(--accent-color);
   color: var(--primary-color);
   line-height: 1.6;
-  cursor: url('/assets/cursor.png'), auto;
 }
+
+body, a, button, nav a {
+  cursor: none !important; /* hide native cursor */
+}
+
+#custom-cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999;
+  width: 32px;           /* actual image size */
+  height: 32px;
+  background: url('/assets/cursor3x.png') no-repeat center center;
+  background-size: contain;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.15s ease-out;
+  opacity: 1;
+}
+
+/* Smooth pulsing */
+@keyframes pulse {
+  0% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(0.85); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+/* Hover pulse */
+.cursor-hover:not(.cursor-click) {
+  animation: pulse 0.6s ease-in-out infinite;
+}
+
+/* Click */
+.cursor-click {
+  animation: none;
+  transform: translate(-50%, -50%) scale(0.6);
+}
+
 
 /* ------------------------------
    Layout
