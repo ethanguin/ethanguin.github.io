@@ -7,6 +7,13 @@
   padding: 0;
 }
 
+:root {
+  --primary-color: #2f4a68;
+  --accent-color: #d5eae7;
+  --overlay-color: rgba(30, 171, 214, 0.6);
+  --highlight-color: #24b1d4;
+}
+
 html, body {
   height: 100%;
   display: flex;
@@ -15,35 +22,36 @@ html, body {
 
 body {
   font-family: 'Montserrat', system-ui, sans-serif;
-  background-color: #d5eae7;
-  color: #2f4a68;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
   line-height: 1.6;
+  cursor: url('../assets/cursor.png'), auto;
 }
 
 /* ------------------------------
    Layout
 --------------------------------*/
 main {
-  flex: 1;                 /* grow to fill available space */
+  flex: 1;
   max-width: 900px;
   margin: 2rem auto;
-  padding: 0 1rem;
+  padding: 5rem 1rem 0; /* push down content so it clears the fixed header */
   width: 100%;
 }
 
+
 footer {
-  background: #222;
-  color: #fff;
+  background: var(--primary-color);
+  color: var(--accent-color);
   text-align: center;
   padding: 1rem;
-  /* removed margin-top so it sticks to bottom */
 }
 
 /* ------------------------------
    Links
 --------------------------------*/
 a {
-  color: #007acc;
+  color: var(--highlight-color);
   text-decoration: none;
 }
 
@@ -55,12 +63,22 @@ a:hover {
    Header & Navigation
 --------------------------------*/
 header {
-  background: #222;
-  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--primary-color);
+  color: var(--accent-color);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1000;
+  transition: box-shadow 0.3s ease;
+}
+
+header.scrolled {
+  box-shadow: 0 12px 15px rgba(0, 0, 0, 0.25);
 }
 
 h1 {
@@ -74,12 +92,12 @@ h1, h2, h3, nav {
 nav a {
   margin-left: 1.4rem;
   font-weight: 500;
-  color: #fff;
   font-size: 2.2rem;
+  color: var(--accent-color);
 }
 
 nav a:hover {
-  color: #00bfff;
+  color: var(--highlight-color);
 }
 
 /* ------------------------------
@@ -91,7 +109,7 @@ section {
 
 h2 {
   margin-bottom: 1rem;
-  color: #222;
+  color: var(--primary-color);
   font-size: 1.8rem;
 }
 
@@ -159,7 +177,7 @@ h2 {
   position: absolute;
   inset: 0; /* shorthand for top/right/bottom/left: 0 */
   background: rgba(0,0,0,0.6);
-  color: #fff;
+  color: var(--accent-color);
   opacity: 0;
   display: flex;
   flex-direction: column;
@@ -175,6 +193,7 @@ h2 {
 }
 
 .project-card h2 {
+  color: var(--accent-color);                   /* base color */
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
 }
@@ -195,7 +214,7 @@ section > h2 {
   margin: 2rem 0 1.5rem;
   font-size: 2rem;
   color: #2f4a68;
-  border-bottom: 2px solid #2f4a68;
+  border-bottom: 2px solid var(--primary-color);
   padding-bottom: 0.5rem;
   display: block;   /* makes it span the full width */
   width: 100%;
@@ -214,8 +233,8 @@ section > h2 {
 }
 
 .landing-links a {
-  background: #222;
-  color: #fff;
+  background: var(--primary-color);
+  color: var(--accent-color);
   padding: 0.8rem 1.2rem;
   border-radius: 6px;
   text-align: center;
@@ -224,7 +243,7 @@ section > h2 {
 }
 
 .landing-links a:hover {
-  background: #007acc;
+  background: var(--highlight-color);
 }
 
 /* ------------------------------
@@ -258,4 +277,30 @@ ul li {
   .landing-links {
     flex-direction: column;
   }
+}
+
+
+/*-------------------
+Click Sparks
+--------------------*/
+/* Spark particles */
+/*-------------------
+Click Sparks
+--------------------*/
+.spark {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 1;
+    transform-origin: center;
+    
+}
+
+.debris-chunk {
+    position: absolute;
+    pointer-events: none;
+    z-index: 999;
+    opacity: 1;
+    transform-origin: center;
 }
