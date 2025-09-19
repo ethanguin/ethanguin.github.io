@@ -267,7 +267,7 @@ document.addEventListener('click', function(e) {
         }
         requestAnimationFrame(animateSpark);
     }
-    
+    /*----------------------
     // Create debris chunks
     const numChunks = 6;
     for (let i = 0; i < numChunks; i++) {
@@ -365,5 +365,6 @@ document.addEventListener('click', function(e) {
         }
         requestAnimationFrame(animateChunk);
     }
+    --*/
 });
 
