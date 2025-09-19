@@ -83,16 +83,19 @@
   </div>
   </main>
   <script src="js/header.js" defer></script>
-
-  <footer>
-    <p>&copy; <span id="year"></span> Ethan Bishop. All rights reserved.</p>
-  </footer>
-
+  <div id="site-footer"></div>
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    fetch('/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('site-footer').innerHTML = data;
+        document.getElementById("year").textContent = new Date().getFullYear();
+      })
+      .catch(err => console.error('Footer load failed:', err));
   </script>
   <script src="js/click.js"></script>
-  <div id="custom-cursor"></div>
-  <script src="js/cursor.js"></script>
+
+  <!-- <div id="custom-cursor"></div>
+  <script src="js/cursor.js"></script> -->
 </body>
 </html>

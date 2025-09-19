@@ -171,8 +171,8 @@ document.addEventListener('click', function(e) {
     const chunkTypes = ['square', 'triangle', 'rectangle', 'diamond'];
     
     // Offset values
-    const offsetX = 15;
-    const offsetY = 15;
+    const offsetX = 8;
+    const offsetY = 8;
     
     // Create sparks (existing code)
     const numSparks = 8;

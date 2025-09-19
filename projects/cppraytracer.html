@@ -32,7 +32,15 @@
     <img src="../images/raytracer-shot1.jpg" alt="Shot 1">
     <img src="../images/raytracer-shot2.jpg" alt="Shot 2">
   </main>
-  <div id="custom-cursor"></div>
-  <script src="../js/cursor.js"></script>
+  <div id="site-footer"></div>
+  <script>
+    fetch('../footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('site-footer').innerHTML = data;
+        document.getElementById("year").textContent = new Date().getFullYear();
+      })
+      .catch(err => console.error('Footer load failed:', err));
+  </script>
 </body>
 </html>

@@ -25,7 +25,7 @@
     <section class="project-section">
       <h2 class="section-title">FX</h2>
       <div class="project-grid">
-        <a class="project-card" href="projects/firefx.html">
+        <a class="project-card" href="projects/realtimefire.html">
           <img src="media/campfireRender.png" alt="Fire FX">
           <div class="overlay">
             <h2>Realtime Fire</h2>
@@ -82,7 +82,18 @@
     </section>
   </main>
   <script src="js/header.js" defer></script>
-  <div id="custom-cursor"></div>
-  <script src="js/cursor.js"></script>
+  <!-- <div id="custom-cursor"></div>
+  <script src="js/cursor.js"></script> -->
+  <script src="js/click.js"></script>
+  <div id="site-footer"></div>
+  <script>
+    fetch('/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('site-footer').innerHTML = data;
+        document.getElementById("year").textContent = new Date().getFullYear();
+      })
+      .catch(err => console.error('Footer load failed:', err));
+  </script>
 </body>
 </html>
