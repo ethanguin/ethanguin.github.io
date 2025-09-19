@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Raytracer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Passero+One&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <script>
+    fetch('../header.html')
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById('site-header').innerHTML = data;
+        })
+        .catch(err => console.error('Header load failed:', err));
+  </script>
+
+  <main class="project-detail">
+    <img src="../images/cppraytracer1.png" alt="Raytracer Screenshot">
+    <p>
+      This is my C++ raytracer, built from the ground up. 
+    </p>
+    <h2>Development Notes</h2>
+    <p>Initially, this was for a class assignment, to understand the math and calculations behind raytracing, but I pushed it further and integrated multithreading, object structures, and other tools to handle animated geometry within the scene.</p>
+
+    <h2>Gallery</h2>
+    <img src="../images/raytracer-shot1.jpg" alt="Shot 1">
+    <img src="../images/raytracer-shot2.jpg" alt="Shot 2">
+  </main>
+</body>
+</html>

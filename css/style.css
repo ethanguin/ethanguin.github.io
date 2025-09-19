@@ -113,10 +113,15 @@ h2 {
 --------------------------------*/
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* responsive squares */
+  grid-template-columns: repeat(auto-fit, 250px); /* fixed width columns */
   gap: 1.5rem;
   padding: 2rem;
+
+  justify-content: center; /* keeps grid centered */
+  margin: 0 auto;
 }
+
+
 
 /* Make each project card a square */
 .project-card {
