@@ -15,29 +15,70 @@
     fetch('/header.html')
         .then(response => response.text())
         .then(data => {
-        document.getElementById('site-header').innerHTML = data;
+          document.getElementById('site-header').innerHTML = data;
         })
         .catch(err => console.error('Header load failed:', err));
   </script>
 
-  <main class="project-grid">
-    <a class="project-card" href="projects/realtimeraytracer.html">
-      <img src="images/realtimeraytracer-thumb.jpg" alt="Real-Time Raytracer">
-      <div class="overlay">
-        <h2>Real-Time Raytracer</h2>
-        <p>A Vulkan-based raytracing engine with real-time denoising.</p>
-      </div>
-    </a>
+  <main>
+    <!-- FX Projects -->
+    <section class="project-section">
+      <h2 class="section-title">FX</h2>
+      <div class="project-grid">
+        <a class="project-card" href="projects/firefx.html">
+          <img src="images/firefx-thumb.jpg" alt="Fire FX">
+          <div class="overlay">
+            <h2>Fire FX</h2>
+            <p>Procedural fire simulation in Houdini.</p>
+          </div>
+        </a>
 
-    <a class="project-card" href="projects/portfolio.html">
-      <img src="images/portfolio-thumb.jpg" alt="Portfolio Website">
-      <div class="overlay">
-        <h2>Portfolio Website</h2>
-        <p>The site you're looking at right now!</p>
+        <a class="project-card" href="projects/smoke.html">
+          <img src="images/smoke-thumb.jpg" alt="Smoke Simulation">
+          <div class="overlay">
+            <h2>Smoke Simulation</h2>
+            <p>Realistic smoke rendered with Mantra.</p>
+          </div>
+        </a>
       </div>
-    </a>
-    
-    <!-- Add more projects as needed -->
+    </section>
+
+    <!-- Graphics Programming Projects -->
+    <section class="project-section">
+      <h2 class="section-title">Graphics Programming</h2>
+      <div class="project-grid">
+        <a class="project-card" href="projects/realtimeraytracer.html">
+          <img src="images/realtimeraytracer-thumb.jpg" alt="Real-Time Raytracer">
+          <div class="overlay">
+            <h2>Real-Time Raytracer</h2>
+            <p>A Vulkan-based raytracing engine with real-time denoising.</p>
+          </div>
+        </a>
+
+        <a class="project-card" href="projects/rendertool.html">
+          <img src="images/rendertool-thumb.jpg" alt="Custom Render Tool">
+          <div class="overlay">
+            <h2>Custom Render Tool</h2>
+            <p>Interactive renderer with OpenGL and Vulkan backends.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Tech Art Projects -->
+    <section class="project-section">
+      <h2 class="section-title">Tech Art</h2>
+      <div class="project-grid">
+        <a class="project-card" href="projects/rigtool.html">
+          <img src="images/rigtool-thumb.jpg" alt="Crystal Shader">
+          <div class="overlay">
+            <h2>Crystal Shader</h2>
+            <p>A crystal shader that uses local position to change transition to rock</p>
+          </div>
+        </a>
+
+      </div>
+    </section>
   </main>
 </body>
 </html>

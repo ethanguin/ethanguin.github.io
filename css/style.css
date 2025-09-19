@@ -7,18 +7,41 @@
   padding: 0;
 }
 
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   font-family: 'Montserrat', system-ui, sans-serif;
-  background-image: url('../images/tilePaper.jpg'); /* your image path */
-  background-repeat: repeat; /* tiles horizontally and vertically */
-  background-position: top left; /* start tiling from top-left corner */
-  background-size: 250px 250px; /* keep original size */
-  background-color: #a5d7d2; /* fallback color */
-  background-blend-mode: multiply; /* blend mode */
+  background-color: #d5eae7;
   color: #2f4a68;
   line-height: 1.6;
 }
 
+/* ------------------------------
+   Layout
+--------------------------------*/
+main {
+  flex: 1;                 /* grow to fill available space */
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  /* removed margin-top so it sticks to bottom */
+}
+
+/* ------------------------------
+   Links
+--------------------------------*/
 a {
   color: #007acc;
   text-decoration: none;
@@ -62,12 +85,6 @@ nav a:hover {
 /* ------------------------------
    Main content
 --------------------------------*/
-main {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
 section {
   margin-bottom: 3rem;
 }
@@ -91,22 +108,95 @@ h2 {
 /* ------------------------------
    Projects section
 --------------------------------*/
-.projects-grid {
+/* ------------------------------
+   Projects grid
+--------------------------------*/
+.project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* responsive squares */
   gap: 1.5rem;
+  padding: 2rem;
 }
 
+/* Make each project card a square */
 .project-card {
-  background: #fff;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: relative;
+  aspect-ratio: 1 / 1;        /* keeps it square */
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  text-decoration: none;
+  color: inherit;
+  background: #000;           /* fallback background */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card h3 {
-  margin-top: 0;
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
 }
+
+/* Thumbnail images fill the square */
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);     /* zoom in on hover */
+}
+
+/* Overlay with title + description */
+.project-card .overlay {
+  position: absolute;
+  inset: 0; /* shorthand for top/right/bottom/left: 0 */
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+.project-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.project-section p {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+section > h2 {
+  text-align: center;
+  margin: 2rem 0 1.5rem;
+  font-size: 2rem;
+  color: #2f4a68;
+  border-bottom: 2px solid #2f4a68;
+  padding-bottom: 0.5rem;
+  display: block;   /* makes it span the full width */
+  width: 100%;
+}
+
+
 
 /* ------------------------------
    Landing page links
@@ -141,17 +231,6 @@ ul {
 
 ul li {
   margin-bottom: 0.5rem;
-}
-
-/* ------------------------------
-   Footer
---------------------------------*/
-footer {
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
 }
 
 /* ------------------------------
