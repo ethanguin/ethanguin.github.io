@@ -331,8 +331,8 @@ document.addEventListener('click', function(e) {
 
             if (posX < leftBound || posX > rightBound || 
                 posY < topBound || posY > bottomBound) {
-                if (spark.parentNode) { // or chunk.parentNode for chunks
-                    spark.parentNode.removeChild(spark);
+                if (chunk.parentNode) { // or chunk.parentNode for chunks
+                    chunk.parentNode.removeChild(chunk);
                 }
                 return;
             }
