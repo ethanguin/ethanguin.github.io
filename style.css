@@ -25,7 +25,7 @@ body {
   background-color: var(--accent-color);
   color: var(--primary-color);
   line-height: 1.6;
-  cursor: url('../assets/cursor.png'), auto;
+  cursor: url('/assets/cursor.png'), auto;
 }
 
 /* ------------------------------
@@ -193,7 +193,7 @@ h2 {
 }
 
 .project-card h2 {
-  color: var(--accent-color);                   /* base color */
+  color: var(--accent-color) !important;
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
 }
