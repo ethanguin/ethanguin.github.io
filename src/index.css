@@ -1,10 +1,10 @@
 :root {
   --color-bg: #e5fffb;
-  --color-surface: rgba(222, 59, 255, 0.1);
-  --color-surface-raised: rgba(222, 59, 255, 0.1);
-  --color-text: #000000;
+  --color-surface: rgba(220, 221, 255, 0.9);
+  --color-surface-raised: rgba(59, 95, 255, 0.1);
+  --color-text: #301531;
   --color-text-muted: #6b6375;
-  --color-accent: #57004b;
+  --color-accent: #002657;
 
   --text: #6b6375;
   --text-h: #08060d;
@@ -35,6 +35,15 @@
   @media (max-width: 1024px) {
     font-size: 16px;
   }
+}
+
+[data-theme="dark"] {
+  --color-bg: #0a0a0a;
+  --color-surface: rgba(65, 22, 73, 0.9);
+  --color-surface-raised: rgba(222, 59, 255, 0.15);
+  --color-text: #e5fffb;
+  --color-text-muted: #8a8490;
+  --color-accent: #d168e6;
 }
 
 @media (prefers-color-scheme: light) {

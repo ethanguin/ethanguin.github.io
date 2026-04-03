@@ -2,9 +2,12 @@ import { Routes, Route, NavLink } from 'react-router-dom'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
+import useTheme from './hooks/useTheme'
 import './App.css'
 
 function App() {
+  const { theme, toggle } = useTheme()
+
   return (
     <>
       <header className="site-header">
@@ -13,6 +16,9 @@ function App() {
           <NavLink to="/projects" className={({ isActive }) => isActive ? 'active' : ''}>Projects</NavLink>
           <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>Contact</NavLink>
         </nav>
+        <button className="theme-toggle" onClick={toggle} aria-label="Toggle theme">
+          {theme === 'light' ? '☽' : '☀'}
+        </button>
       </header>
 
       <main className="site-main">
