@@ -6,7 +6,7 @@ const disciplines = [
     title: 'Capstones',
     projects: [
       { title: 'DragonKisser', cover: '/media/dragonkisserCover.png', summary: 'Worked as the lead VFX artist and Tech Artist. create environment, FX, and UI tools within Unreal and Houdini.' },
-      { title: 'Honey Business', cover: '/media/bobocover.png', summary: 'Worked as an FX artist. Built production tools and researched techniques for bee swarms, fluid simulation, and plant keep alive.' },
+      { title: 'Honey Business', cover: '/media/boboCover.png', summary: 'Worked as an FX artist. Built production tools and researched techniques for bee swarms, fluid simulation, and plant keep alive.' },
       { title: 'Love & Gold', cover: '/media/loveandgoldcover.png', summary: 'Worked as an FX artist. Built production tools for fire, snow storms, coin pile RBD, and shattering FX.' },
       { title: 'Skyguard', cover: '/media/skyguardCover.png', summary: 'Worked as a VFX artist. Created bullet and explosion effects for the enemy grunts. Created and placed FX in cinematics.' },
     ],
@@ -18,7 +18,7 @@ const disciplines = [
       // { title: 'Realtime Fire FX', cover: '/media/fire.jpg', summary: 'Short summary of the project.' },
       { title: 'Ocean Beach', cover: '/media/oceancover.png', summary: 'FLIP Ocean Simulation in Houdini with a custom implementation of the whitewater solver.' },
       { title: 'Gunsmoke Scene', cover: '/media/gunshot.png', summary: 'Project that puts together various FX elements. Vellum shirt simulation, Pyro smoke, FLIP and particle fluid, RBD shattered bottle.' },
-      { title: 'Pumpkin Smash', cover: '/media/pumpkincover.png', summary: 'Small RBD simulation project in Houdini. Layered with POP particles.' },
+      { title: 'Pumpkin Smash', cover: '/media/pumpkinCover.png', summary: 'Small RBD simulation project in Houdini. Layered with POP particles.' },
     ],
   },
   {
