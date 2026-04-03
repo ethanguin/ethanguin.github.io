@@ -7,21 +7,25 @@ import './App.css'
 function App() {
   return (
     <>
-      <header>
+      <header className="site-header">
         <nav>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/projects">Projects</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}>Home</NavLink>
+          <NavLink to="/projects" className={({ isActive }) => isActive ? 'active' : ''}>Projects</NavLink>
+          <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>Contact</NavLink>
         </nav>
       </header>
 
-      <main>
+      <main className="site-main">
         <Routes>
           <Route path="/"         element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact"  element={<Contact />} />
         </Routes>
       </main>
+
+      <footer className="site-footer">
+        <p>&copy; {new Date().getFullYear()} Ethan Bishop. All rights reserved.</p>
+      </footer>
     </>
   )
 }
