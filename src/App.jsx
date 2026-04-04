@@ -11,15 +11,16 @@ function App() {
   return (
     <>
       <header className="site-header">
-        <nav>
-          <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}>Home</NavLink>
-          <NavLink to="/projects" className={({ isActive }) => isActive ? 'active' : ''}>Projects</NavLink>
-          <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>Contact</NavLink>
-        </nav>
-        <button className="theme-toggle" onClick={toggle} aria-label="Toggle theme">
-          {theme === 'light' ? '☽' : '☀'}
-        </button>
-      </header>
+  <nav>
+    <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}>Home</NavLink>
+    <NavLink to="/projects" className={({ isActive }) => isActive ? 'active' : ''}>Projects</NavLink>
+    <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>Contact</NavLink>
+    <a href="/media/EthanBishopResume2026.pdf" target="_blank" rel="noreferrer">Resume</a>
+  </nav>
+  <button className="theme-toggle" onClick={toggle} aria-label="Toggle theme">
+    {theme === 'light' ? '☽' : '☀'}
+  </button>
+</header>
 
       <main className="site-main">
         <Routes>
