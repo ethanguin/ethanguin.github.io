@@ -248,8 +248,9 @@ body {
 }
 
 .discipline-header h2 {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-family: 'Passero One', serif;
+  font-size: 2.1rem;
+  font-weight: 900;
   color: var(--color-text);
 }
 
@@ -322,7 +323,8 @@ body {
 
 /* ── Contact ── */
 .contact h1 {
-  font-size: 1.5rem;
+  font-family: 'Passero One', serif;
+  font-size: 2.1rem;
   margin-bottom: 1.5rem;
   color: var(--color-text);
 }
@@ -430,11 +432,28 @@ body {
   margin-bottom: 2rem;
 }
 .project-detail-title-block h1 {
+  font-family: 'Passero One', serif;
   font-size: clamp(2rem, 5vw, 3.5rem);
   margin: 0.25rem 0 0.75rem;
   line-height: 1.1;
+  color: var(--color-text);
+}
+.project-section {
+  margin-bottom: 2rem;
 }
 
+.project-section h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+  color: var(--color-text);
+}
+
+.project-section p {
+  text-align: left;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  padding: 0 4rem;
+}
 /* ═══════════════════════════════════
    Gallery Carousel
 ═══════════════════════════════════ */
@@ -636,4 +655,12 @@ body {
 
 .project-hero {
   margin-bottom: 3rem;
+}
+
+.project-hero-media {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 28px;
+  display: block;
 }
