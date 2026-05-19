@@ -185,7 +185,7 @@ export default function ProjectDetail() {
           {project.breakdown.map((section, i) => (
             <div key={i} className="project-section">
               <h2>{section.heading}</h2>
-              <p>{section.body}</p>
+              <p style={{ whiteSpace: 'pre-line' }}>{section.body}</p>
             </div>
           ))}
         </div>
