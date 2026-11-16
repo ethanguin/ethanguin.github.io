@@ -17,7 +17,7 @@ export default function Home() {
 
       <section className="home-reel" id="reel">
   <iframe
-    src="https://www.youtube.com/embed/bwopdJ6-qxQ?rel=0&modestbranding=1&iv_load_policy=3"
+    src="https://www.youtube.com/embed/I48zRhWBsg4?rel=0&modestbranding=1&iv_load_policy=3"
     title="Demo Reel"
     frameBorder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
